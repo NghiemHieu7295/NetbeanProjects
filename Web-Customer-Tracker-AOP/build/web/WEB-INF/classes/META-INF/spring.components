@@ -1,0 +1,7 @@
+#
+#Sun Mar 17 18:25:04 ICT 2019
+hieu.webcustomertracker.controller.CustomerController=org.springframework.stereotype.Component
+hieu.webcustomertracker.entity.Customer=javax.persistence.Entity,javax.persistence.Table
+hieu.webcustomertracker.service.CustomerServiceImpl=org.springframework.stereotype.Component
+hieu.webcustomertracker.aspect.CRMLoggingAspect=org.springframework.stereotype.Component
+hieu.webcustomertracker.dao.CustomerDAOImpl=org.springframework.stereotype.Component

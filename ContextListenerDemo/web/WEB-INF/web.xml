@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <!--Context Init Parameters-->
+    <context-param>
+        <param-name>breed</param-name>
+        <param-value>Great Dane</param-value>
+    </context-param>
+    
+    <!--Context Listener-->
+    <listener>
+        <listener-class>hieu.listenerdemo.MyServletContextListenerDemo</listener-class>
+    </listener>
+    
+    <!--Map Listener Servlet-->
+    <servlet>
+        <servlet-name>TestListener</servlet-name>
+        <servlet-class>hieu.listenerdemo.TestListener</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestListener</servlet-name>
+        <url-pattern>/TestContextListener</url-pattern>
+    </servlet-mapping>
+    
+    <!--Map Context Attribute Servlet-->
+    <servlet>
+        <servlet-name>TestContextAttribute</servlet-name>
+        <servlet-class>hieu.listenerdemo.TestContextAttribute</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestContextAttribute</servlet-name>
+        <url-pattern>/TestContextAttribute</url-pattern>
+    </servlet-mapping>
+    
+    <!--Map Session Attribute Servlet-->
+    <servlet>
+        <servlet-name>TestSessionAttr</servlet-name>
+        <servlet-class>hieu.listenerdemo.TestSessionAttr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestSessionAttr</servlet-name>
+        <url-pattern>/TestSessionAttr</url-pattern>
+    </servlet-mapping>
+    
+    <!--Map Test Cookie Servlet-->
+    <servlet>
+        <servlet-name>TestCookie</servlet-name>
+        <servlet-class>hieu.listenerdemo.TestCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestCookie</servlet-name>
+        <url-pattern>/TestCookie</url-pattern>
+    </servlet-mapping>
+    
+    <!--Map Check Cookie Servlet-->
+    <servlet>
+        <servlet-name>CheckCookie</servlet-name>
+        <servlet-class>hieu.listenerdemo.CheckCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckCookie</servlet-name>
+        <url-pattern>/CheckCookie</url-pattern>
+    </servlet-mapping>
+</web-app>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Google Drive Permission Manager</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css" th:href="@{/css/font-awesome.min.css}"/>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+        <style type="text/css">
+            #urlMess{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Sidebar -->
+        <aside>
+            <img src="../static/images/logo-ominext.png" th:src="@{/images/logo-ominext.png}" alt="" id="logo">
+            <img src="../static/images/default-user-image.png" th:src="@{/images/default-user-image.png}" alt="" id="avatar">
+
+            <p>Welcome, <span></span></p>
+            
+            <ul>
+                <li><a href="home.html" th:href="@{/home}" class="active">Home</a></li>
+                <li>
+                    <a href="request-history.html" th:href="@{/history}">Request History</a>
+                </li>
+                <li>
+                    <a href="changePassword.html" th:href="@{/changePassword}" id="changePass-btn">Change Password</a>
+                </li>
+                <li>
+                    <a href="login.html" th:href="@{/logout}" id="logout-btn">Log Out</a>
+                </li>
+            </ul>
+        </aside>
+        
+        <!-- Main Body -->
+        <div id="main-body">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <form action="">
+                        <p id="urlMess"></p>
+                        <input type="text" id="driveUrl" />
+                        <button type="button" id="start-btn">Start</button>
+                    </form>
+                </div>
+                
+                <div class="col-sm-4">
+                    <div id="project-tree">
+                        
+                    </div>
+                </div>
+                
+                <div class="col-sm-8">
+                    <table id="permission-list">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>EMAIL</th>
+                                <th>ROLE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- JS -->
+        <script type="text/javascript" src="../static/js/jquery-3.3.1.min.js" th:src="@{/js/jquery-3.3.1.min.js}" ></script>
+        <script type="text/javascript" src="../static/js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
+        <script type="text/javascript" src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+        <script type="text/javascript" src="../static/js/home.js" th:src="@{/js/home.js}"></script>
+    </body>
+</html>

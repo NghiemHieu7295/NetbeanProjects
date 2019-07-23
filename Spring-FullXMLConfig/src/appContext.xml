@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+        <!-- Read file properties -->
+        <context:property-placeholder location="classpath:sport.properties" />
+        
+	<!-- Define beans -->
+        <bean id="happyFortuneService" class="com.hieu.spring.HappyFortuneService"></bean>
+        <bean id="sadFortuneService" class="com.hieu.spring.SadFortuneService"></bean>
+        
+        <!-- This bean has injection by constructor -->
+        <bean class="com.hieu.spring.BaseballCoach">
+            <constructor-arg value="${name}" />
+            <constructor-arg value="${age}" />
+            <constructor-arg ref="sadFortuneService" />
+        </bean>
+        
+        <!-- This bean has injection by set method -->
+        <bean class="com.hieu.spring.TrackCoach">
+            <property name="fortuneService" ref="happyFortuneService" />
+            <property name="name" value="${name}" />
+            <property name="age" value="${age}" />
+        </bean>
+        
+        <!-- This bean has default scope: Singleton -->
+        <bean class="com.hieu.spring.CricketCoach"></bean>
+        
+        <!-- This bean has scope: Prototype -->
+        <bean class="com.hieu.spring.TennisCoach" scope="prototype"></bean>
+        
+        <!-- This bean has custom init method and destroy method -->
+        <bean class="com.hieu.spring.SwimCoach" init-method="doStartup" destroy-method="doCleanup"></bean>
+</beans>

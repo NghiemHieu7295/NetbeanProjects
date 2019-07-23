@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd 
+                           http://www.springframework.org/schema/mvc 
+                           http://www.springframework.org/schema/mvc/spring-mvc.xsd 
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <context:component-scan base-package="hieu.springmvcxmlconfig" />
+
+    <mvc:annotation-driven />
+    
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/views/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    
+    <!-- Define 2 Beans FortuneService -->
+    <bean id="happyFortuneService" class="hieu.springmvcxmlconfig.model.HappyFortuneService"></bean>
+    <bean id="sadFortuneService" class="hieu.springmvcxmlconfig.model.SadFortuneService"></bean>
+    
+    <!-- Bean BaseballCoach. This bean has injection by constructor -->
+    <bean class="hieu.springmvcxmlconfig.model.BaseballCoach">
+        <constructor-arg name="fortuneService" ref="sadFortuneService" />
+        <constructor-arg name="name" value="Nghiem Manh Hieu" />
+        <constructor-arg name="age" value="24" />
+    </bean>
+    
+    <!-- Bean TrackCoach. This bean has injection by setter method -->
+    <bean class="hieu.springmvcxmlconfig.model.TrackCoach">
+        <property name="fortuneService" ref="happyFortuneService" />
+        <property name="name" value="Phung Thi Hai Yen" />
+        <property name="age" value="21" />
+    </bean>
+    
+    <!-- Bean CricketCoach. This bean has default scope: Singleton -->
+    <bean class="hieu.springmvcxmlconfig.model.CricketCoach"></bean>
+    
+    <!-- Bean TennisCoach. This bean has scope: Prototype -->
+    <bean class="hieu.springmvcxmlconfig.model.TennisCoach" scope="prototype"></bean>
+    
+    <!-- Bean SwimCoach. This bean has custom init method and destroy method -->
+    <bean class="hieu.springmvcxmlconfig.model.SwimCoach" init-method="doStartup" destroy-method="doCleanup"></bean>
+</beans>

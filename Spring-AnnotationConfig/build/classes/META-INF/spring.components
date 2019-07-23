@@ -1,0 +1,10 @@
+#
+#Wed Jan 02 16:17:04 ICT 2019
+com.hieu.spring.SadFortuneService=org.springframework.stereotype.Component
+com.hieu.spring.BaseballCoach=org.springframework.stereotype.Component
+com.hieu.spring.TennisCoach=org.springframework.stereotype.Component
+com.hieu.spring.KaratedoCoach=org.springframework.stereotype.Component
+com.hieu.spring.HappyFortuneService=org.springframework.stereotype.Component
+com.hieu.spring.SwimCoach=org.springframework.stereotype.Component
+com.hieu.spring.TrackCoach=org.springframework.stereotype.Component
+com.hieu.spring.CricketCoach=org.springframework.stereotype.Component

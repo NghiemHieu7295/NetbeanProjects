@@ -1,0 +1,9 @@
+#
+#Sun Mar 17 16:57:34 ICT 2019
+spring.demo.aop.dao.AccountDAO=org.springframework.stereotype.Component
+spring.demo.aop.aspect.MyApiAnalysticAspect=org.springframework.stereotype.Component
+spring.demo.aop.aspect.MyCloudLogAsyncAspect=org.springframework.stereotype.Component
+spring.demo.aop.DemoConfig=org.springframework.stereotype.Component
+spring.demo.aop.service.TrafficFortuneService=org.springframework.stereotype.Component
+spring.demo.aop.dao.MembershipDAO=org.springframework.stereotype.Component
+spring.demo.aop.aspect.MyDemoLoggingAspect=org.springframework.stereotype.Component

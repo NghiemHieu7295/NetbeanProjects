@@ -1,0 +1,6 @@
+hieu\springsecuritycustomloginform\config\MyDispatcherServletInitializer.class
+hieu\springsecuritycustomloginform\config\SecurityInitializer.class
+hieu\springsecuritycustomloginform\controller\HomeController.class
+hieu\springsecuritycustomloginform\config\ApplicationConfig.class
+hieu\springsecuritycustomloginform\config\SecurityConfig.class
+hieu\springsecuritycustomloginform\controller\LoginController.class

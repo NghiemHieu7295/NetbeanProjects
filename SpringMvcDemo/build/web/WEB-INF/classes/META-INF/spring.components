@@ -1,0 +1,7 @@
+#
+#Mon Jan 07 16:53:33 ICT 2019
+com.hieu.springdemo.mvc.SillyController=org.springframework.stereotype.Component
+com.hieu.springdemo.mvc.StudentController=org.springframework.stereotype.Component
+com.hieu.springdemo.mvc.HelloWorldController=org.springframework.stereotype.Component
+com.hieu.springdemo.mvc.CustomerController=org.springframework.stereotype.Component
+com.hieu.springdemo.mvc.HomeController=org.springframework.stereotype.Component

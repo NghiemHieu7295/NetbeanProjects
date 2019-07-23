@@ -1,0 +1,6 @@
+#
+#Sat Mar 16 17:33:32 ICT 2019
+spring.demo.aop.dao.AccountDAO=org.springframework.stereotype.Component
+spring.demo.aop.DemoConfig=org.springframework.stereotype.Component
+spring.demo.aop.aspect.MyDemoLoggingAspect=org.springframework.stereotype.Component
+spring.demo.aop.dao.MembershipDAO=org.springframework.stereotype.Component

@@ -1,0 +1,7 @@
+#
+#Sun Mar 10 18:30:41 ICT 2019
+hieu.webcustomertracker.controller.CustomerController=org.springframework.stereotype.Component
+hieu.webcustomertracker.entity.Customer=javax.persistence.Entity,javax.persistence.Table
+hieu.webcustomertracker.service.CustomerServiceImpl=org.springframework.stereotype.Component
+test.TestDBServlet=javax.servlet.annotation.WebServlet
+hieu.webcustomertracker.dao.CustomerDAOImpl=org.springframework.stereotype.Component
